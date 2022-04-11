@@ -25,7 +25,7 @@
                     <br>
                     <div class="row">
                         <div class="col-5"></div>
-                        <div class="col-2"><input class="btn btn-success" type="submit" value="Analizza"></div>
+                        <div class="col-2"><input class="btn btn-success" type="submit" value="Analizza" onclick="alert('Il file è stato spostato nell apposita cartella');"></div>
                         <div class="col-5"></div>
                     </div>
                     
