@@ -1,6 +1,10 @@
 <?php
+    $find = array(","," ",".","!","?");
     $text = $_POST["text"];
     $text = strtoupper($text);
+
+    //Trova i char nell'array $find e gli elimina dalla stringa
+    $text = str_replace($find,"",$text);
 
     //Converte la stringa in un array e conta le ripetizioni dei valori
     $text = array_count_values(str_split($text));
@@ -10,7 +14,7 @@
     //echo var_dump($text);
     
     //Apre il file in modalità sovrascrittura
-    $fp = fopen('./Risultato.csv', 'w');
+    $fp = fopen('../Risultato.csv', 'w');
 
     //Inserisce le chiavi dell'array nel file impostando il ; come delimitatore
     fputcsv($fp, array_keys($text),";");
