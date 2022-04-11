@@ -1,10 +1,30 @@
 <?php
-    $find = array(","," ",".","!","?");
+    $findSpecial = array(","," ",".","!","?");
+    $findA = array("à","À","á","Á");
+    $findE = array("È","É","è","é");
+    $findI = array("ì","Ì","Í","í");
+    $findO = array("ò","ó","Ò","Ó");
+    $findU = array("ù","Ù","Ú","ú");
     $text = $_POST["text"];
     $text = strtoupper($text);
 
-    //Trova i char nell'array $find e gli elimina dalla stringa
-    $text = str_replace($find,"",$text);
+    //Trova i caratteri speciali nell'array $findSpecial e gli elimina dalla stringa
+    $text = str_replace($findSpecial,"",$text);
+
+    //Trova i caratteri simili alla A nell'array $findA e gli sostituisce con la 'a'
+    $text = str_replace($findA,"A",$text);
+
+    //Trova i caratteri simili alla E nell'array $findE e gli sostituisce con la 'e'
+    $text = str_replace($findE,"E",$text);
+
+    //Trova i caratteri simili alla I nell'array $findI e gli sostituisce con la 'i'
+    $text = str_replace($findI,"I",$text);
+
+    //Trova i caratteri simili alla O nell'array $findO e gli sostituisce con la 'o'
+    $text = str_replace($findO,"O",$text);
+
+    //Trova i caratteri simili alla U nell'array $findU e gli sostituisce con la 'u'
+    $text = str_replace($findU,"U",$text);
 
     //Converte la stringa in un array e conta le ripetizioni dei valori
     $text = array_count_values(str_split($text));
@@ -52,8 +72,22 @@
                                 </tr>";
                             }
                         ?>
-
                     </table>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <form action="../Index.php">
+                        <div class="row">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <input class="btn btn-primary" type="submit" value="USA ANCORA">
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-4"></div>
             </div>
