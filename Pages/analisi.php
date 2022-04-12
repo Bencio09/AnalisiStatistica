@@ -1,5 +1,5 @@
 <?php
-    $findSpecial = array(","," ",".","!","?");
+    $findSpecial = array(","," ",".","!","?","\n","\r","(",")");
     $findA = array("à","À","á","Á");
     $findE = array("È","É","è","é");
     $findI = array("ì","Ì","Í","í");

@@ -21,7 +21,7 @@
             <div class="col-6 alert alert-success">
                 <form action="./Pages/analisi.php" method="post">
                     <label for="Textarea1" class="form-label">Testo da Decifrare</label>
-                    <textarea class="form-control" id="Textarea1" rows="3" cols="30" name="text" placeholder="Inserisci qui il testo"  maxlength="5000" required></textarea>
+                    <textarea class="form-control" id="Textarea1" rows="3" cols="30" name="text" placeholder="Inserisci qui il testo"  maxlength="500000" required></textarea>
                     <br>
                     <div class="row">
                         <div class="col-5"></div>
